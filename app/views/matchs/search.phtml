@@ -1,0 +1,137 @@
+<?php
+/**
+ * @var \Phalcon\Mvc\View\Engine\Php $this
+ */
+?>
+
+<?php use Phalcon\Tag; ?>
+
+<div class="row">
+    <nav>
+        <ul class="pager">
+            <li class="previous"><?php echo $this->tag->linkTo(array("matchs/index", "Go Back")); ?></li>
+            <li class="next"><?php echo $this->tag->linkTo(array("matchs/new", "Create ")); ?></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="page-header">
+    <h1>Search result</h1>
+</div>
+
+<?php echo $this->getContent(); ?>
+
+<div class="row">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+            <th>Ip</th>
+            <th>Server</th>
+            <th>Season</th>
+            <th>Team Of A</th>
+            <th>Team Of A Of Flag</th>
+            <th>Team Of A Of Name</th>
+            <th>Team Of B</th>
+            <th>Team Of B Of Flag</th>
+            <th>Team Of B Of Name</th>
+            <th>Status</th>
+            <th>Score Of A</th>
+            <th>Score Of B</th>
+            <th>Max Of Round</th>
+            <th>Rules</th>
+            <th>Overtime Of Startmoney</th>
+            <th>Overtime Of Max Of Round</th>
+            <th>Config Of Full Of Score</th>
+            <th>Config Of Ot</th>
+            <th>Config Of Streamer</th>
+            <th>Config Of Knife Of Round</th>
+            <th>Config Of Switch Of Auto</th>
+            <th>Config Of Auto Of Change Of Password</th>
+            <th>Config Of Password</th>
+            <th>Config Of Heatmap</th>
+            <th>Config Of Authkey</th>
+            <th>Enable</th>
+            <th>Map Of Selection Of Mode</th>
+            <th>Ingame Of Enable</th>
+            <th>Current Of Map</th>
+            <th>Force Of Zoom Of Match</th>
+            <th>Tv Of Record Of File</th>
+            <th>Identifier</th>
+            <th>Created</th>
+            <th>Updated</th>
+            <th>Auto Of Start</th>
+            <th>Startdate</th>
+            <th>Auto Of Start Of Time</th>
+
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($page->items as $match): ?>
+            <tr>
+                <td><?php echo $match->id ?></td>
+            <td><?php echo $match->ip ?></td>
+            <td><?php echo $match->server_id ?></td>
+            <td><?php echo $match->season_id ?></td>
+            <td><?php echo $match->team_a ?></td>
+            <td><?php echo $match->team_a_flag ?></td>
+            <td><?php echo $match->team_a_name ?></td>
+            <td><?php echo $match->team_b ?></td>
+            <td><?php echo $match->team_b_flag ?></td>
+            <td><?php echo $match->team_b_name ?></td>
+            <td><?php echo $match->status ?></td>
+            <td><?php echo $match->score_a ?></td>
+            <td><?php echo $match->score_b ?></td>
+            <td><?php echo $match->max_round ?></td>
+            <td><?php echo $match->rules ?></td>
+            <td><?php echo $match->overtime_startmoney ?></td>
+            <td><?php echo $match->overtime_max_round ?></td>
+            <td><?php echo $match->config_full_score ?></td>
+            <td><?php echo $match->config_ot ?></td>
+            <td><?php echo $match->config_streamer ?></td>
+            <td><?php echo $match->config_knife_round ?></td>
+            <td><?php echo $match->config_switch_auto ?></td>
+            <td><?php echo $match->config_auto_change_password ?></td>
+            <td><?php echo $match->config_password ?></td>
+            <td><?php echo $match->config_heatmap ?></td>
+            <td><?php echo $match->config_authkey ?></td>
+            <td><?php echo $match->enable ?></td>
+            <td><?php echo $match->map_selection_mode ?></td>
+            <td><?php echo $match->ingame_enable ?></td>
+            <td><?php echo $match->current_map ?></td>
+            <td><?php echo $match->force_zoom_match ?></td>
+            <td><?php echo $match->tv_record_file ?></td>
+            <td><?php echo $match->identifier_id ?></td>
+            <td><?php echo $match->created_at ?></td>
+            <td><?php echo $match->updated_at ?></td>
+            <td><?php echo $match->auto_start ?></td>
+            <td><?php echo $match->startdate ?></td>
+            <td><?php echo $match->auto_start_time ?></td>
+
+                <td><?php echo $this->tag->linkTo(array("matchs/edit/" . $match->id, "Edit")); ?></td>
+                <td><?php echo $this->tag->linkTo(array("matchs/delete/" . $match->id, "Delete")); ?></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+
+<div class="row">
+    <div class="col-sm-1">
+        <p class="pagination" style="line-height: 1.42857;padding: 6px 12px;">
+            <?php echo $page->current, "/", $page->total_pages ?>
+        </p>
+    </div>
+    <div class="col-sm-11">
+        <nav>
+            <ul class="pagination">
+                <li><?php echo $this->tag->linkTo("matchs/search", "First") ?></li>
+                <li><?php echo $this->tag->linkTo("matchs/search?page=" . $page->before, "Previous") ?></li>
+                <li><?php echo $this->tag->linkTo("matchs/search?page=" . $page->next, "Next") ?></li>
+                <li><?php echo $this->tag->linkTo("matchs/search?page=" . $page->last, "Last") ?></li>
+            </ul>
+        </nav>
+    </div>
+</div>

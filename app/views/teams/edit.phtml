@@ -1,0 +1,91 @@
+<?php
+/**
+ * @var \Phalcon\Mvc\View\Engine\Php $this
+ */
+?>
+
+<div class="row">
+    <nav>
+        <ul class="pager">
+            <li class="previous"><?php echo $this->tag->linkTo(array("teams", "Back")) ?></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="page-header">
+    <h1>
+        Edit teams
+    </h1>
+</div>
+
+<?php echo $this->getContent(); ?>
+
+<?php
+    echo $this->tag->form(
+        array(
+            "teams/save",
+            "autocomplete" => "off",
+            "class" => "form-horizontal"
+        )
+    );
+?>
+
+<div class="form-group">
+    <label for="fieldName" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("name", "size" => 30, "class" => "form-control", "id" => "fieldName")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldShorthandle" class="col-sm-2 control-label">Shorthandle</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("shorthandle", "size" => 30, "class" => "form-control", "id" => "fieldShorthandle")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldFlag" class="col-sm-2 control-label">Flag</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("flag", "size" => 30, "class" => "form-control", "id" => "fieldFlag")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldLink" class="col-sm-2 control-label">Link</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("link", "size" => 30, "class" => "form-control", "id" => "fieldLink")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldSeasonId" class="col-sm-2 control-label">Season</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("season_id", "size" => 30, "class" => "form-control", "id" => "fieldSeasonId")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldCreatedAt" class="col-sm-2 control-label">Created</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("created_at", "size" => 30, "class" => "form-control", "id" => "fieldCreatedAt")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldUpdatedAt" class="col-sm-2 control-label">Updated</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("updated_at", "size" => 30, "class" => "form-control", "id" => "fieldUpdatedAt")) ?>
+    </div>
+</div>
+
+
+<?php echo $this->tag->hiddenField("id") ?>
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <?php echo $this->tag->submitButton(array("Save", "class" => "btn btn-default")) ?>
+    </div>
+</div>
+
+<?php echo $this->tag->endForm(); ?>

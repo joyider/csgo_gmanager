@@ -1,0 +1,299 @@
+<?php
+/**
+ * @var \Phalcon\Mvc\View\Engine\Php $this
+ */
+?>
+
+<div class="row">
+    <nav>
+        <ul class="pager">
+            <li class="previous"><?php echo $this->tag->linkTo(array("matchs", "Go Back")) ?></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="page-header">
+    <h1>
+        Create matchs
+    </h1>
+</div>
+
+<?php echo $this->getContent(); ?>
+
+<?php
+    echo $this->tag->form(
+        array(
+            "matchs/create",
+            "autocomplete" => "off",
+            "class" => "form-horizontal"
+        )
+    );
+?>
+
+<div class="form-group">
+    <label for="fieldIp" class="col-sm-2 control-label">Ip</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("ip", "size" => 30, "class" => "form-control", "id" => "fieldIp")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldServerId" class="col-sm-2 control-label">Server</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("server_id", "size" => 30, "class" => "form-control", "id" => "fieldServerId")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldSeasonId" class="col-sm-2 control-label">Season</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("season_id", "size" => 30, "class" => "form-control", "id" => "fieldSeasonId")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldTeamA" class="col-sm-2 control-label">Team Of A</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("team_a", "size" => 30, "class" => "form-control", "id" => "fieldTeamA")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldTeamAFlag" class="col-sm-2 control-label">Team Of A Of Flag</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("team_a_flag", "size" => 30, "class" => "form-control", "id" => "fieldTeamAFlag")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldTeamAName" class="col-sm-2 control-label">Team Of A Of Name</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("team_a_name", "size" => 30, "class" => "form-control", "id" => "fieldTeamAName")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldTeamB" class="col-sm-2 control-label">Team Of B</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("team_b", "size" => 30, "class" => "form-control", "id" => "fieldTeamB")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldTeamBFlag" class="col-sm-2 control-label">Team Of B Of Flag</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("team_b_flag", "size" => 30, "class" => "form-control", "id" => "fieldTeamBFlag")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldTeamBName" class="col-sm-2 control-label">Team Of B Of Name</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("team_b_name", "size" => 30, "class" => "form-control", "id" => "fieldTeamBName")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldStatus" class="col-sm-2 control-label">Status</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("status", "type" => "number", "class" => "form-control", "id" => "fieldStatus")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldScoreA" class="col-sm-2 control-label">Score Of A</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("score_a", "size" => 30, "class" => "form-control", "id" => "fieldScoreA")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldScoreB" class="col-sm-2 control-label">Score Of B</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("score_b", "size" => 30, "class" => "form-control", "id" => "fieldScoreB")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldMaxRound" class="col-sm-2 control-label">Max Of Round</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("max_round", "type" => "number", "class" => "form-control", "id" => "fieldMaxRound")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldRules" class="col-sm-2 control-label">Rules</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("rules", "size" => 30, "class" => "form-control", "id" => "fieldRules")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldOvertimeStartmoney" class="col-sm-2 control-label">Overtime Of Startmoney</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("overtime_startmoney", "size" => 30, "class" => "form-control", "id" => "fieldOvertimeStartmoney")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldOvertimeMaxRound" class="col-sm-2 control-label">Overtime Of Max Of Round</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("overtime_max_round", "type" => "number", "class" => "form-control", "id" => "fieldOvertimeMaxRound")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldConfigFullScore" class="col-sm-2 control-label">Config Of Full Of Score</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("config_full_score", "type" => "number", "class" => "form-control", "id" => "fieldConfigFullScore")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldConfigOt" class="col-sm-2 control-label">Config Of Ot</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("config_ot", "type" => "number", "class" => "form-control", "id" => "fieldConfigOt")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldConfigStreamer" class="col-sm-2 control-label">Config Of Streamer</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("config_streamer", "type" => "number", "class" => "form-control", "id" => "fieldConfigStreamer")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldConfigKnifeRound" class="col-sm-2 control-label">Config Of Knife Of Round</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("config_knife_round", "type" => "number", "class" => "form-control", "id" => "fieldConfigKnifeRound")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldConfigSwitchAuto" class="col-sm-2 control-label">Config Of Switch Of Auto</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("config_switch_auto", "type" => "number", "class" => "form-control", "id" => "fieldConfigSwitchAuto")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldConfigAutoChangePassword" class="col-sm-2 control-label">Config Of Auto Of Change Of Password</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("config_auto_change_password", "type" => "number", "class" => "form-control", "id" => "fieldConfigAutoChangePassword")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldConfigPassword" class="col-sm-2 control-label">Config Of Password</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("config_password", "size" => 30, "class" => "form-control", "id" => "fieldConfigPassword")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldConfigHeatmap" class="col-sm-2 control-label">Config Of Heatmap</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("config_heatmap", "type" => "number", "class" => "form-control", "id" => "fieldConfigHeatmap")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldConfigAuthkey" class="col-sm-2 control-label">Config Of Authkey</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("config_authkey", "size" => 30, "class" => "form-control", "id" => "fieldConfigAuthkey")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldEnable" class="col-sm-2 control-label">Enable</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("enable", "type" => "number", "class" => "form-control", "id" => "fieldEnable")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldMapSelectionMode" class="col-sm-2 control-label">Map Of Selection Of Mode</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("map_selection_mode", "size" => 30, "class" => "form-control", "id" => "fieldMapSelectionMode")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldIngameEnable" class="col-sm-2 control-label">Ingame Of Enable</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("ingame_enable", "type" => "number", "class" => "form-control", "id" => "fieldIngameEnable")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldCurrentMap" class="col-sm-2 control-label">Current Of Map</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("current_map", "size" => 30, "class" => "form-control", "id" => "fieldCurrentMap")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldForceZoomMatch" class="col-sm-2 control-label">Force Of Zoom Of Match</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("force_zoom_match", "type" => "number", "class" => "form-control", "id" => "fieldForceZoomMatch")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldTvRecordFile" class="col-sm-2 control-label">Tv Of Record Of File</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("tv_record_file", "size" => 30, "class" => "form-control", "id" => "fieldTvRecordFile")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldIdentifierId" class="col-sm-2 control-label">Identifier</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("identifier_id", "size" => 30, "class" => "form-control", "id" => "fieldIdentifierId")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldCreatedAt" class="col-sm-2 control-label">Created</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("created_at", "size" => 30, "class" => "form-control", "id" => "fieldCreatedAt")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldUpdatedAt" class="col-sm-2 control-label">Updated</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("updated_at", "size" => 30, "class" => "form-control", "id" => "fieldUpdatedAt")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldAutoStart" class="col-sm-2 control-label">Auto Of Start</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("auto_start", "type" => "number", "class" => "form-control", "id" => "fieldAutoStart")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldStartdate" class="col-sm-2 control-label">Startdate</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("startdate", "size" => 30, "class" => "form-control", "id" => "fieldStartdate")) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldAutoStartTime" class="col-sm-2 control-label">Auto Of Start Of Time</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(array("auto_start_time", "size" => 30, "class" => "form-control", "id" => "fieldAutoStartTime")) ?>
+    </div>
+</div>
+
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <?php echo $this->tag->submitButton(array("Save", "class" => "btn btn-default")) ?>
+    </div>
+</div>
+
+<?php echo $this->tag->endForm(); ?>
