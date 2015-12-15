@@ -16,10 +16,9 @@
 ### What is this repository for? ###
 
 * Quick summary
-The CSGO_Gmanager is a csgo competetive game manager for making tournaments and keeping track of your stats during practise.
-In extension of beeing a  tournament manager. It will also serve as a warmod plugin tracker.
-
-Currently It uses ebot_csgo as a tournament broker, but we are undertaking a major redesign of that plugin to be even more extensive and competetive focused.
+*The CSGO_Gmanager is a csgo competetive game manager for making tournaments and keeping track of your stats during practise.
+*In extension of beeing a  tournament manager. It will also serve as a warmod plugin tracker.
+*Currently it uses ebot_csgo as a tournament broker, but we are undertaking a major redesign of that plugin to be even more extensive and competetive focused.
 
 Warmod broker code can be found under XXXXXXXXX
 * Version
